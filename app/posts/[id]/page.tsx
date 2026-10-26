@@ -19,22 +19,22 @@ export default async function Post({ params }: { params: Promise<{ id: string }>
   const contentWithImages = postData.content.replace(
     /!\[([^\]]*)\]\(([^)]+)\)/g,
     (match: string, alt: string, src: string) => {
-      return `<img src="${src}" alt="${alt}" class="rounded-lg my-6 w-full" />`;
+      return `<img src="${src}" alt="${alt}" class="rounded-2xl my-8 w-full shadow-xl" />`;
     }
   );
 
   return (
-    <div className="min-h-screen bg-zinc-50 dark:bg-black">
-      <main className="max-w-3xl mx-auto px-6 py-16">
+    <div className="min-h-screen bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 animate-gradient">
+      <main className="max-w-4xl mx-auto px-6 py-16">
         <Link
           href="/"
-          className="inline-block text-blue-600 dark:text-blue-400 hover:underline mb-8"
+          className="inline-block px-6 py-3 bg-white/90 backdrop-blur-sm text-purple-600 font-semibold rounded-full hover:bg-white transition-all shadow-lg mb-8"
         >
           ← Back to all posts
         </Link>
-        <article className="bg-white dark:bg-zinc-900 rounded-lg overflow-hidden shadow-sm border border-zinc-200 dark:border-zinc-800">
+        <article className="bg-white/95 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl">
           {postData.image && (
-            <div className="relative h-64 w-full">
+            <div className="relative h-72 w-full">
               <Image
                 src={postData.image}
                 alt={postData.title}
@@ -43,14 +43,14 @@ export default async function Post({ params }: { params: Promise<{ id: string }>
               />
             </div>
           )}
-          <div className="p-8">
-            <h1 className="text-4xl font-bold text-zinc-900 dark:text-zinc-50 mb-4">
+          <div className="p-10">
+            <h1 className="text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
               {postData.title}
             </h1>
-            <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-8">{postData.date}</p>
-            <div className="prose prose-zinc dark:prose-invert max-w-none">
+            <p className="text-lg text-purple-600 font-medium mb-8">📅 {postData.date}</p>
+            <div className="prose prose-lg prose-purple max-w-none">
               <div
-                className="text-zinc-700 dark:text-zinc-300"
+                className="text-gray-700 leading-relaxed"
                 dangerouslySetInnerHTML={{ __html: contentWithImages }}
               />
             </div>
