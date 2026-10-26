@@ -2,11 +2,16 @@
 title: '5 Web Development Tips for Beginners'
 date: '2026-10-24'
 excerpt: 'Essential tips to help you become a better web developer and write cleaner code.'
+image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=600&fit=crop'
 ---
+
+![Web Development Banner](https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=600&fit=crop)
 
 # 5 Web Development Tips for Beginners
 
 Web development is a vast field, but these tips will help you start on the right foot.
+
+![Developer Workspace](https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800&h=400&fit=crop)
 
 ## 1. Learn the Fundamentals First
 

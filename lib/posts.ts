@@ -10,6 +10,7 @@ export interface Post {
   date: string;
   excerpt: string;
   content?: string;
+  image?: string;
 }
 
 export function getSortedPostsData(): Post[] {
